@@ -12,9 +12,9 @@ See <https://www.thegeekstuff.com/2010/06/chmod-command-examples/>
 - `g` is for group
 - `o` is for others
 
-- r is read permission
-- w is write permission
-- x is execute permission
+- `r` is read permission
+- `w` is write permission
+- `x` is execute permission
 
 ```
 chmod u+r, g+rwx, o+rw testfile.txt

@@ -46,6 +46,8 @@ Blue are directories, white are files. Directories have d at the start
 Even when renaming a .jpg file to .txt file, linux recognises it's still an image. Use `file` to display file type.
 `cp` to copy a file
 
-`rm` to remove a file
+`rm` to remove a file, `rm -r` to remove a directory and all files it contains.
 
 `mkdir` make directory. You can make multiple directories at the same time by putting a space in between directory name. `mkdir my pics` creates a folder called my and one called pics. `mkdir "my pics"` creates one folder called my pics.
+
+Lunix has a built-n next editor called nano. We can create an empty text file and edit it in nano.
