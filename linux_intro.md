@@ -10,6 +10,7 @@
 
 Linux is made up of the kernel (core OS)
 
+
 `uname` gives you the os.
 
 `uname --help` gives more information and a list of further commands
@@ -28,6 +29,33 @@ It's an improvement on Unix
 A shell is software that provides interface to run commands
 
 # Useful Linux Commands
+
+| Command   | Description                                                        |
+|-----------|--------------------------------------------------------------------|
+| `ls`      | Lists files and directories in the current directory.              |
+| `cd`      | Changes the current directory.                                     |
+| `pwd`     | Prints the current working directory.                              |
+| `mkdir`   | Creates a new directory.                                           |
+| `rm`      | Removes files and directories.                                     |
+| `cp`      | Copies files and directories.                                      |
+| `mv`      | Moves or renames files and directories.                            |
+| `cat`     | Concatenates and displays the contents of files.                   |
+| `grep`    | Searches for patterns in files.                                    |
+| `chmod`   | Changes permissions of files and directories.                      |
+| `chown`   | Changes the owner of files and directories.                        |
+| `chgrp`   | Changes the group ownership of files and directories.              |
+| `ssh`     | Connects to a remote server using the Secure Shell (SSH) protocol. |
+| `ps`      | Lists currently running processes.                                 |
+| `sudo`    | Executes a command with superuser (administrative) privileges.     |
+| `history` | Lists the command history.                                         |
+| `exit`    | Exits the current shell or terminal.                               |
+| `uname`   | Prints system information.                                         |
+| `nano`    | A text editor                                                      |
+| `touch`   | Creates an empty file                                              |
+| `printenv`| Prints the enviroment variables                                    |
+| `echo`    | Prints a file or string                                            |
+| `export`  | Creates an enviroment variable                                     |
+| `source`  | Used to reload the .bashrc file                                    |
 
 `ps` command lets you know what processes are running and which shell.
 
@@ -59,6 +87,20 @@ Lunix has a built-n next editor called nano. We can create an empty text file an
 
 `ls -l` gives the long view of a file so you can see permissions.
 
+## Linux Kill Commands
+### Start then kill a process
+`sleep` puts system to sleep for however many seconds is specified
+`sleep 5000 &` lists PID as well
+### Gentle kill
+`kill -1 [PID NUMBER]`
+
+### Harsher kill
+`kill 3000` without the signal(`-1` or others). It automatically uses `-15`, which is terminate.
+
+If you kill a parent process it will also kill the child process
+
+### What if the parent process doesn't die?
+`kill -9` brute force kill, kills parent processes. But child processes might not die and they will be zombie processes.
 
 ### Nano
 Nano is an in-built text editor. To open nano in Linux, you can follow these steps:
