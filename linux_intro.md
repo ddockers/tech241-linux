@@ -11,14 +11,6 @@
 Linux is made up of the kernel (core OS)
 
 
-`uname` gives you the os.
-
-`uname --help` gives more information and a list of further commands
-
-`whoami` tells you who the user is
-
-`exit` gets us back to Windows
-
 Linux commands work on Windows in GitBash, but not in Command Prompt.
 
 GitBash is running a version of GNU on top of Windows.
@@ -57,6 +49,16 @@ A shell is software that provides interface to run commands
 | `export`  | Creates an enviroment variable                                     |
 | `source`  | Used to reload the .bashrc file                                    |
 
+
+`uname` gives you the os.
+
+`uname --help` gives more information and a list of further commands
+
+`whoami` tells you who the user is
+
+`exit` gets us back to Windows
+
+
 `ps` command lets you know what processes are running and which shell.
 
 `history` lets you see all commands ever entered in the VM. Can then use `![key number]` to run previous command.
@@ -90,7 +92,7 @@ Lunix has a built-n next editor called nano. We can create an empty text file an
 ## Linux Kill Commands
 ### Start then kill a process
 `sleep` puts system to sleep for however many seconds is specified
-`sleep 5000 &` lists PID as well
+`sleep 5000 &` lists PID as well, and also keeps it running in the background.
 ### Gentle kill
 `kill -1 [PID NUMBER]`
 
