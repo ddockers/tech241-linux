@@ -35,7 +35,7 @@ sudo npm install pm2 -g
 git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
 
 # cd into app folder
-cd /homt/adminuser/app/app
+cd /home/adminuser/app2/app
 
 # install npm
 npm install
