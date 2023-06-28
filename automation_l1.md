@@ -34,7 +34,18 @@ sudo npm install pm2 -g
 # Copy app folder to VM
 git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
 
+# cd into app folder
+cd /homt/adminuser/app/app
+
+# install npm
+npm install
+
 # Run Sparta app in the background
-~/app/app2 &
+pm2 start app.js
 ```
 
+`./new_script.sh` to run the script.
+
+When writing the scrpt, we'd need to `cd` into the correct folder. To check where we're at we could include a `pwd` command. 
+
+To make sure something in the script hs run, we could ad an `echo`.
