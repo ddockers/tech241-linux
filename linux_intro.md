@@ -116,3 +116,5 @@ Use Ctrl+A and Ctrl+E to move the cursor to the start and end of the line.
 Use Ctrl+Y and Ctrl+V to move the page up and down.
 
 Use Ctrl+X to save and exit the text editor.
+
+Use `./[filename]` to run the file in nano.

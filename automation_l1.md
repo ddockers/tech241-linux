@@ -30,6 +30,11 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt install nodejs -y
 
 sudo npm install pm2 -g
+
+# Copy app folder to VM
+git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
+
+# Run Sparta app in the background
+~/app/app2 &
 ```
 
-**TBC**
