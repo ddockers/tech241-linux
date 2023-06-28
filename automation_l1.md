@@ -4,6 +4,8 @@ New VM created
 
 `new_script.sh` nano script created.
 
+`chmod u+x new_script.sh` to grant execute permissions.
+
 ### Script Commands
 ```
 #! /bin/bash
@@ -49,3 +51,5 @@ pm2 start app.js
 When writing the scrpt, we'd need to `cd` into the correct folder. To check where we're at we could include a `pwd` command. 
 
 To make sure something in the script hs run, we could ad an `echo`.
+
+Then go to VM and change inbound port rules. Destination port 3000 with Protocol TCP.

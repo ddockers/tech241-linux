@@ -4,6 +4,8 @@ Connect to DB VM
 
 `db_script.sh` script created.
 
+`chmod u+x db_script.sh` to grant execute permissions.
+
 ## Script content
 
 ```
@@ -35,8 +37,9 @@ cat nano /etc/mongod.conf
 
 # start mongo db
 
-sudo systemctl start mongod
+sudo systemctl restart mongod
 
 # enable mongo db
 sudo systemctl enable mongod
 ```
+`./db_script.sh` to execute script.
