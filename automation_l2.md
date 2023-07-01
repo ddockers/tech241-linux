@@ -1,5 +1,19 @@
 # Automation L2 - Configure Mongo DB VM (including bindIP) with a script
 
+## Requirements to run DB VM
+1. Linux VM - Ubuntu 18.04 LTS
+2. Update and upgrade
+3. Install mongo db - version 3.2
+    - Download key for correct version
+    - Source list - specify mongo db version
+    - Apt update again
+    - Install mongo db
+4. Configure mongo db to accept connections from app VM
+   - Change bindIP
+   - Start mongo db
+   - Enable mongo db
+    
+
 Connect to DB VM
 
 `db_script.sh` script created.
@@ -30,7 +44,7 @@ sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org
 
 # configure bindIP to 0.0.0.0
 
-sed -i 's/^bindip=.*/bindip=0.0.0.0/' /etc/mongod.conf
+sudo sed -i 's/bindip: 127.0.0.1/bindip: 0.0.0.0/' /etc/mongod.conf
 
 # print mongo nano to make sure it's done
 cat nano /etc/mongod.conf
