@@ -60,30 +60,43 @@ sudo apt update -y
 
 # upgrade
 sudo apt upgrade -y
+
 # install nginx
 sudo apt install nginx -y
+
 # restart nginx
 sudo systemctl restart nginx
+
 # enable nginx
 sudo systemctl enable nginx
+
 # setup nginx as a reverse proxy
 sudo sed -i 's@try_files .*;@proxy_pass http://localhost:3000;@' /etc/nginx/sites-available/default
+
 # restart nginx again
 sudo systemctl restart nginx
+
 # get from url needed version of node
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
 # install nodejs
 sudo apt install -y nodejs
+
 #installing pm2 that helps run apps in the background
 sudo npm install pm2 -g
+
 # getting app folder to the VM
-git clone https://github.com/majeranowski/tech241-sparta-app.git app3
+git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
+
 #getting inside app folder
-cd app3/app
+cd /home/adminuser/app2/app
+
 #Creating DB_HOST env variable
 export DB_HOST=mongodb://20.162.216.138:27017/posts
+
 # installing the app
 npm install
+
 # starting the app
 pm2 -f start app.js
 ```
