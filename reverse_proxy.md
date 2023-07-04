@@ -64,11 +64,11 @@ sudo apt upgrade -y
 # install nginx
 sudo apt install nginx -y
 
-# restart nginx
-sudo systemctl restart nginx
-
 # enable nginx
 sudo systemctl enable nginx
+
+# install sed
+sudo apt install sed -y
 
 # setup nginx as a reverse proxy
 sudo sed -i 's@try_files .*;@proxy_pass http://localhost:3000;@' /etc/nginx/sites-available/default
@@ -76,13 +76,13 @@ sudo sed -i 's@try_files .*;@proxy_pass http://localhost:3000;@' /etc/nginx/site
 # restart nginx again
 sudo systemctl restart nginx
 
-# get from url needed version of node
+# get correct version of node js from url
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # install nodejs
-sudo apt install -y nodejs
+sudo apt install nodejs -y
 
-#installing pm2 that helps run apps in the background
+# installing pm2 that helps run apps in the background
 sudo npm install pm2 -g
 
 # getting app folder to the VM
@@ -100,3 +100,5 @@ npm install
 # starting the app
 pm2 -f start app.js
 ```
+
+`sudo apt install sed -y` - with some images, sed isn't installed. 

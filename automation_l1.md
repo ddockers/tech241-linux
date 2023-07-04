@@ -8,7 +8,7 @@ New VM created
 
 ### Script Commands
 ```
-#! /bin/bash
+#!/bin/bash
 
 # update
 sudo apt update -y
@@ -18,9 +18,6 @@ sudo apt upgrade -y
 
 # install nginx
 sudo apt install nginx -y
-
-# restart nginx
-sudo systemctl restart nginx
 
 # enabie nginx
 sudo systemctl enable nginx
@@ -53,3 +50,5 @@ When writing the scrpt, we'd need to `cd` into the correct folder. To check wher
 To make sure something in the script hs run, we could ad an `echo`.
 
 Then go to VM and change inbound port rules. Destination port 3000 with Protocol TCP.
+
+`sudo systemctl restart nginx` isn't needed since nginx automatically starts upol installation/

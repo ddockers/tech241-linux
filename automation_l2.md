@@ -21,8 +21,11 @@ Connect to DB VM
 `chmod u+x db_script.sh` to grant execute permissions.
 
 ## Script content
+`bash` is the shell we're using. `#!/bin/bash` is instructions for the bash shell to run the script.
 
 ```
+#!/bin/bash
+
 # update
 sudo apt update -y
 
@@ -57,3 +60,5 @@ sudo systemctl restart mongod
 sudo systemctl enable mongod
 ```
 `./db_script.sh` to execute script.
+
+`sudo systemctl restart mongo` - `start` could be used in place of `restart` since in this instance it means the same thing. MongoDB is not already running after installation (unlike NginX, whuch runs straight after installation).
