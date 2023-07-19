@@ -51,4 +51,4 @@ To make sure something in the script hs run, we could ad an `echo`.
 
 Then go to VM and change inbound port rules. Destination port 3000 with Protocol TCP.
 
-`sudo systemctl restart nginx` isn't needed since nginx automatically starts upol installation/
+`sudo systemctl restart nginx` isn't needed since nginx automatically starts upon installation.
