@@ -86,13 +86,13 @@ sudo apt install nodejs -y
 sudo npm install pm2 -g
 
 # getting app folder to the VM
-git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
+git clone http://github.com/ddockers/tech241-sparta-app.git app2
 
 #getting inside app folder
 cd /home/adminuser/app2/app
 
 #Creating DB_HOST env variable
-export DB_HOST=mongodb://20.162.216.138:27017/posts
+export DB_HOST=mongodb://172.31.20.86:27017/posts
 
 # installing the app
 npm install
@@ -101,4 +101,55 @@ npm install
 pm2 -f start app.js
 ```
 
-`sudo apt install sed -y` - with some images, sed isn't installed. 
+`sudo apt install sed -y` - with some images, sed isn't installed.
+
+172.31.20.86
+
+20.162.216.138
+```
+#!/bin/bash
+
+# update
+sudo apt update -y
+
+# upgrade
+sudo apt upgrade -y
+
+# install nginx
+sudo apt install nginx -y
+
+# restart nginx
+sudo systemctl restart nginx
+
+# enabie nginx
+sudo systemctl enable nginx
+
+# set up nginx as a reverse proxy
+sudo sed -i 's@try_files .*;@proxy_pass http://localhost:3000;@' /etc/nginx/sites-available/default
+
+# restart nginx again
+sudo systemctl restart nginx
+
+# install nodejs
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+sudo apt install nodejs -y
+
+sudo npm install pm2 -g
+
+# Copy app folder to VM
+git clone http://github.com/ddockers/tech241-sparta-app.git app2
+
+# cd into app folder
+cd app2/app
+
+# Create DB_HOST env variable
+export DB_HOST=mongodb://20.162.216.138:27017/posts
+
+# install npm
+npm install
+
+# Run Sparta app in the background
+pm2 start app.js
+```

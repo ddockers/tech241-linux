@@ -31,7 +31,7 @@ sudo apt install nodejs -y
 sudo npm install pm2 -g
 
 # Copy app folder to VM
-git clone http://github.com/jungjunggg/tech241_sparta_app.git app2
+git clone https://github.com/ddockers/tech241-sparta-app.git app2
 
 # cd into app folder
 cd /home/adminuser/app2/app

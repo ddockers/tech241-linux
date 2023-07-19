@@ -47,12 +47,12 @@ sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org
 
 # configure bindIP to 0.0.0.0
 
-sudo sed -i 's/bindip: 127.0.0.1/bindip: 0.0.0.0/' /etc/mongod.conf
+sudo sed -i 's/bindip: 127.0.0.1/bindip: 0.0.0.0/g' /etc/mongod.conf
 
 # print mongo nano to make sure it's done
 cat nano /etc/mongod.conf
 
-# start mongo db
+# start mongo db 
 
 sudo systemctl restart mongod
 
